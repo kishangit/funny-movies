@@ -1,0 +1,14 @@
+<div style="width: auto; display: flex; align-items: center; flex-direction: column; margin-top: 100px;">
+  <fieldset class="scheduler-border">
+      <legend class="scheduler-border">Share a Youtube Movie</legend>
+      <div class="control-group" style="display: flex; align-items: center; flex-direction: column; width: 500px;">
+        <div>
+          <label class="control-label input-label" for="startTime">Youtube URL :</label>
+          <input type="text" class="datetime" id="startTime" name="startTime" placeholder="URL" style="width:300px;" />
+        </div>
+        <div>
+          <%= link_to "Share", new_movie_path, class: 'btn btn-primary m5' %>
+        </div>
+      </div>
+  </fieldset>
+</div>
