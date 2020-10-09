@@ -1,14 +1,14 @@
 <div>
   <% @movies.each do |movie| %>
-    <div style="display: flex; margin: 10px;" class="movie_shadow">
+    <div style="display: flex; margin: 10px; align-items: center;" class="movie_shadow">
       <iframe width="300" height="200" src="<%= movie.src %>"></iframe>
       
       <div style="display: flex; flex-direction: column; margin: 5px 0px 0px 10px;">
-        <h4>Movie Title</h4>
+        <label class="font_bold">Movie Title</label>
         <label><%= movie.title %>></label>
-        
-        <h4>Description</h4>
+        <label class="font_bold">Description</label>
         <p><%= movie.description %></p>
+        <label>Created at: <%= movie.video_created_at %></label>
       </div>
 
     </div>

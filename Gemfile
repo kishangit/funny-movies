@@ -62,3 +62,5 @@ end
 gem 'tzinfo-data'
 
 gem 'video_info'
+
+gem "font-awesome-rails"

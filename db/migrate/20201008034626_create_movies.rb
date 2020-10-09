@@ -4,6 +4,7 @@ class CreateMovies < ActiveRecord::Migration[6.0]
       t.string :title
       t.string :description
       t.string :src
+      t.date   :video_created_at
 
       t.timestamps
     end
