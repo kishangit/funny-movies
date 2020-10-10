@@ -7,7 +7,6 @@ class MoviesControllerTest < ActionDispatch::IntegrationTest
     get '/users/sign_in'
     sign_in users(:one)
     post user_session_url
-    @movie = Movie.create(title: "This is title", description: "This is description", src: "This is source url")
   end
 
   test "should get index" do

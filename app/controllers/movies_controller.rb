@@ -5,13 +5,13 @@ class MoviesController < ApplicationController
     @movies = Movie.all.order('created_at desc')
   end
 
-  def new 
+  def new
   end
 
   def create
     # Movie.all.map(&:destroy)
-    if params[:movie_url].present?
-      video = VideoInfo.new(params[:movie_url])
+    video = VideoInfo.new(params[:movie_url]) rescue nil
+    if params[:movie_url].present? && video.present?
       movie = Movie.new(title: video.title, description: video.description, src: video.embed_url, video_created_at: video.date)
       if movie.valid?
         movie.save
