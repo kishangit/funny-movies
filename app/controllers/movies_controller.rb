@@ -9,17 +9,19 @@ class MoviesController < ApplicationController
   end
 
   def create
-    # Movie.all.map(&:destroy)
     video = VideoInfo.new(params[:movie_url]) rescue nil
     if params[:movie_url].present? && video.present?
-      movie = Movie.new(title: video.title, description: video.description, src: video.embed_url, video_created_at: video.date)
+      movie = Movie.new(
+                        title: video.title, description: video.description, 
+                        src: video.embed_url, video_created_at: video.date
+                      )
       if movie.valid?
         movie.save
-        flash[:notice] = 'Movie succesfully added'
+        flash[:notice] = I18n.t 'movie.created'
         redirect_to movies_path
       end
     else
-      flash[:alert] = 'Please add valid url'
+      flash[:alert] = I18n.t 'movie.valid_url'
       render 'new'
     end
   end

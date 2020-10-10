@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+  movie:
+    created: 'Movie succesfully added'
+    valid_url: 'Please add valid url'
