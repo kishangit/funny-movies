@@ -1,9 +1,9 @@
 <div>
   <% @movies.each do |movie| %>
-    <div style="display: flex; margin: 10px; align-items: center;" class="movie_shadow">
+    <div class="flex movie_shadow m10 fl_align_center movie_tile">
       <iframe width="300" height="200" src="<%= movie.src %>"></iframe>
       
-      <div style="display: flex; flex-direction: column; margin: 5px 0px 0px 10px;">
+      <div class="flex movie_details">
         <label class="font_bold">Movie Title</label>
         <label><%= movie.title %>></label>
         <label class="font_bold">Description</label>

@@ -12,6 +12,38 @@ nav {
   margin: 5px;
 }
 
+.m10 {
+  margin: 10px;
+}
+
+.margin0 {
+  margin: 0px;
+}
+
+.width_full {
+  width: 100%;
+}
+
+.main_title {
+  font-size: 1.5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.fl_align_center {
+  align-items: center;
+}
+
+.fl_align_self_center {
+  align-self: center
+}
+
+.space_between {
+  justify-content: space-between;
+}
+
 .default_shadow {
   box-shadow: 1px 1px 2px black;
 }
@@ -19,6 +51,22 @@ nav {
 .movie_shadow {
   box-shadow: 1px 1px 2px black;
   border-radius: 5px;
+}
+
+.movie_details {
+  flex-direction: column;
+  margin: 5px 0px 0px 10px;
+}
+
+.new_movie {
+  width: auto;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.share_movie_div {
+  flex-direction: column;
+  width: 500px;
 }
 
 fieldset.scheduler-border {
@@ -87,4 +135,56 @@ legend.scheduler-border {
 .swing-out-top-bck {
 	-webkit-animation: swing-out-top-bck 1.5s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
 	        animation: swing-out-top-bck 1.5s cubic-bezier(0.600, -0.280, 0.735, 0.045) both;
+}
+
+
+@media only screen and (max-width: 800px) {
+  .text_center {
+    text-align: center;
+  }
+
+  .main_navigation_div {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .nav_logged_in {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie_tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .new_movie_fieldset {
+    margin: 0px !important;
+    display: flex;
+    padding: 0px !important;
+    flex-direction: column;
+    width: auto;
+  }
+
+  .new_movie_url_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fl_align_center form {
+    width: 100%;
+  }
+
+  .share_movie_div {
+    width: auto;
+  }
 }

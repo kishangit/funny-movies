@@ -1,9 +1,9 @@
-<div style="width: auto; display: flex; align-items: center; flex-direction: column; margin-top: 100px;">
+<div class="flex fl_align_center new_movie">
   <%= form_tag("/movies", :method => "post") do %>
-    <fieldset class="scheduler-border">
+    <fieldset class="scheduler-border new_movie_fieldset">
         <legend class="scheduler-border">Share a Youtube Movie</legend>
-        <div class="control-group" style="display: flex; align-items: center; flex-direction: column; width: 500px;">
-          <div>
+        <div class="control-group flex fl_align_center share_movie_div">
+          <div class="new_movie_url_field">
             <label class="control-label input-label" for="url">Youtube URL :</label>
             <%= text_field_tag(:movie_url) %>
           </div>
